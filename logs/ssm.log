@@ -1,0 +1,98 @@
+[INFO] [2017-05-15 13:54:57][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+[INFO] [2017-05-15 13:54:58][org.hibernate.Version]HHH000412: Hibernate Core {4.3.8.Final}
+[INFO] [2017-05-15 13:54:58][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO] [2017-05-15 13:54:58][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO] [2017-05-15 13:54:58][org.hibernate.cfg.Configuration]HHH000043: Configuring from resource: /hibernate.cfg.xml
+[INFO] [2017-05-15 13:54:58][org.hibernate.cfg.Configuration]HHH000040: Configuration resource: /hibernate.cfg.xml
+[INFO] [2017-05-15 13:54:59][org.hibernate.cfg.Configuration]HHH000221: Reading mappings from resource: hbm/SysRole.hbm.xml
+[INFO] [2017-05-15 13:55:01][org.hibernate.cfg.Configuration]HHH000221: Reading mappings from resource: hbm/SysUser.hbm.xml
+[INFO] [2017-05-15 13:55:02][org.hibernate.cfg.Configuration]HHH000221: Reading mappings from resource: hbm/SysUserRole.hbm.xml
+[INFO] [2017-05-15 14:03:45][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+[INFO] [2017-05-15 14:03:45][org.hibernate.Version]HHH000412: Hibernate Core {4.3.8.Final}
+[INFO] [2017-05-15 14:03:45][org.hibernate.cfg.Environment]HHH000206: hibernate.properties not found
+[INFO] [2017-05-15 14:03:46][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO] [2017-05-15 14:03:46][org.hibernate.cfg.Configuration]HHH000043: Configuring from resource: /hibernate.cfg.xml
+[INFO] [2017-05-15 14:03:46][org.hibernate.cfg.Configuration]HHH000040: Configuration resource: /hibernate.cfg.xml
+[INFO] [2017-05-15 14:03:46][org.hibernate.cfg.Configuration]HHH000221: Reading mappings from resource: hbm/SysRole.hbm.xml
+[INFO] [2017-05-15 14:03:46][org.hibernate.cfg.Configuration]HHH000221: Reading mappings from resource: hbm/SysUser.hbm.xml
+[INFO] [2017-05-15 14:03:46][org.hibernate.cfg.Configuration]HHH000221: Reading mappings from resource: hbm/SysUserRole.hbm.xml
+[INFO] [2017-05-15 15:29:43][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+[INFO] [2017-05-15 15:29:43][org.hibernate.Version]HHH000412: Hibernate Core {4.3.8.Final}
+[INFO] [2017-05-15 15:29:43][org.hibernate.cfg.Environment]HHH000205: Loaded properties from resource hibernate.properties: {hibernate.bytecode.use_reflection_optimizer=false}
+[INFO] [2017-05-15 15:29:43][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO] [2017-05-15 15:29:43][org.hibernate.cfg.Configuration]HHH000043: Configuring from resource: /hibernate.cfg.xml
+[INFO] [2017-05-15 15:29:43][org.hibernate.cfg.Configuration]HHH000040: Configuration resource: /hibernate.cfg.xml
+[INFO] [2017-05-15 15:29:43][org.hibernate.cfg.Configuration]HHH000041: Configured SessionFactory: null
+[WARN] [2017-05-15 15:29:43][org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl]HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[INFO] [2017-05-15 15:29:43][org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl]HHH000401: using driver [oracle.jdbc.OracleDriver] at URL [jdbc:oracle:thin:@localhost:1521:orcl]
+[INFO] [2017-05-15 15:29:43][org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl]HHH000046: Connection properties: {user=ssmdemo, password=****}
+[INFO] [2017-05-15 15:29:43][org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl]HHH000006: Autocommit mode: false
+[INFO] [2017-05-15 15:29:43][org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl]HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] [2017-05-15 15:29:43][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.Oracle9iDialect
+[INFO] [2017-05-15 15:29:43][org.hibernate.engine.jdbc.internal.LobCreatorBuilder]HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+[INFO] [2017-05-15 15:29:44][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO] [2017-05-15 15:29:44][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO] [2017-05-15 15:38:13][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+[INFO] [2017-05-15 15:38:14][org.hibernate.Version]HHH000412: Hibernate Core {4.3.8.Final}
+[INFO] [2017-05-15 15:38:14][org.hibernate.cfg.Environment]HHH000205: Loaded properties from resource hibernate.properties: {hibernate.bytecode.use_reflection_optimizer=false}
+[INFO] [2017-05-15 15:38:14][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO] [2017-05-15 15:38:15][org.hibernate.cfg.Configuration]HHH000043: Configuring from resource: /hibernate.cfg.xml
+[INFO] [2017-05-15 15:38:15][org.hibernate.cfg.Configuration]HHH000040: Configuration resource: /hibernate.cfg.xml
+[INFO] [2017-05-15 15:38:15][org.hibernate.cfg.Configuration]HHH000041: Configured SessionFactory: null
+[WARN] [2017-05-15 15:38:18][org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl]HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[INFO] [2017-05-15 15:38:18][org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl]HHH000401: using driver [oracle.jdbc.OracleDriver] at URL [jdbc:oracle:thin:@localhost:1521:orcl]
+[INFO] [2017-05-15 15:38:18][org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl]HHH000046: Connection properties: {user=ssmdemo, password=****}
+[INFO] [2017-05-15 15:38:18][org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl]HHH000006: Autocommit mode: false
+[INFO] [2017-05-15 15:38:18][org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl]HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] [2017-05-15 15:38:22][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.Oracle9iDialect
+[INFO] [2017-05-15 15:38:22][org.hibernate.engine.jdbc.internal.LobCreatorBuilder]HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+[INFO] [2017-05-15 15:38:23][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO] [2017-05-15 15:38:24][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO] [2017-05-15 15:41:35][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+[INFO] [2017-05-15 15:41:35][org.hibernate.Version]HHH000412: Hibernate Core {4.3.8.Final}
+[INFO] [2017-05-15 15:41:35][org.hibernate.cfg.Environment]HHH000205: Loaded properties from resource hibernate.properties: {hibernate.bytecode.use_reflection_optimizer=false}
+[INFO] [2017-05-15 15:41:35][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO] [2017-05-15 15:41:36][org.hibernate.cfg.Configuration]HHH000043: Configuring from resource: /hibernate.cfg.xml
+[INFO] [2017-05-15 15:41:36][org.hibernate.cfg.Configuration]HHH000040: Configuration resource: /hibernate.cfg.xml
+[INFO] [2017-05-15 15:41:37][org.hibernate.cfg.Configuration]HHH000041: Configured SessionFactory: null
+[WARN] [2017-05-15 15:41:39][org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl]HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[INFO] [2017-05-15 15:41:39][org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl]HHH000401: using driver [oracle.jdbc.OracleDriver] at URL [jdbc:oracle:thin:@localhost:1521:orcl]
+[INFO] [2017-05-15 15:41:39][org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl]HHH000046: Connection properties: {user=ssmdemo, password=****}
+[INFO] [2017-05-15 15:41:39][org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl]HHH000006: Autocommit mode: false
+[INFO] [2017-05-15 15:41:40][org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl]HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] [2017-05-15 15:41:43][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.Oracle9iDialect
+[INFO] [2017-05-15 15:41:43][org.hibernate.engine.jdbc.internal.LobCreatorBuilder]HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+[INFO] [2017-05-15 15:41:44][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO] [2017-05-15 15:41:44][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO] [2017-05-15 15:59:08][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+[INFO] [2017-05-15 15:59:09][org.hibernate.Version]HHH000412: Hibernate Core {4.3.8.Final}
+[INFO] [2017-05-15 15:59:09][org.hibernate.cfg.Environment]HHH000205: Loaded properties from resource hibernate.properties: {hibernate.bytecode.use_reflection_optimizer=false}
+[INFO] [2017-05-15 15:59:09][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO] [2017-05-15 15:59:10][org.hibernate.cfg.Configuration]HHH000043: Configuring from resource: /hibernate.cfg.xml
+[INFO] [2017-05-15 15:59:10][org.hibernate.cfg.Configuration]HHH000040: Configuration resource: /hibernate.cfg.xml
+[INFO] [2017-05-15 15:59:11][org.hibernate.cfg.Configuration]HHH000041: Configured SessionFactory: null
+[WARN] [2017-05-15 15:59:15][org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl]HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[INFO] [2017-05-15 15:59:15][org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl]HHH000401: using driver [oracle.jdbc.OracleDriver] at URL [jdbc:oracle:thin:@localhost:1521:orcl]
+[INFO] [2017-05-15 15:59:15][org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl]HHH000046: Connection properties: {user=ssmdemo, password=****}
+[INFO] [2017-05-15 15:59:15][org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl]HHH000006: Autocommit mode: false
+[INFO] [2017-05-15 15:59:15][org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl]HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] [2017-05-15 15:59:19][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.Oracle9iDialect
+[INFO] [2017-05-15 15:59:19][org.hibernate.engine.jdbc.internal.LobCreatorBuilder]HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+[INFO] [2017-05-15 15:59:20][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO] [2017-05-15 15:59:20][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
+[INFO] [2017-05-15 16:10:21][org.hibernate.annotations.common.Version]HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+[INFO] [2017-05-15 16:10:22][org.hibernate.Version]HHH000412: Hibernate Core {4.3.8.Final}
+[INFO] [2017-05-15 16:10:22][org.hibernate.cfg.Environment]HHH000205: Loaded properties from resource hibernate.properties: {hibernate.bytecode.use_reflection_optimizer=false}
+[INFO] [2017-05-15 16:10:22][org.hibernate.cfg.Environment]HHH000021: Bytecode provider name : javassist
+[INFO] [2017-05-15 16:10:22][org.hibernate.cfg.Configuration]HHH000043: Configuring from resource: /hibernate.cfg.xml
+[INFO] [2017-05-15 16:10:22][org.hibernate.cfg.Configuration]HHH000040: Configuration resource: /hibernate.cfg.xml
+[INFO] [2017-05-15 16:10:23][org.hibernate.cfg.Configuration]HHH000041: Configured SessionFactory: null
+[WARN] [2017-05-15 16:10:26][org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl]HHH000402: Using Hibernate built-in connection pool (not for production use!)
+[INFO] [2017-05-15 16:10:27][org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl]HHH000401: using driver [oracle.jdbc.OracleDriver] at URL [jdbc:oracle:thin:@localhost:1521:orcl]
+[INFO] [2017-05-15 16:10:27][org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl]HHH000046: Connection properties: {user=ssmdemo, password=****}
+[INFO] [2017-05-15 16:10:27][org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl]HHH000006: Autocommit mode: false
+[INFO] [2017-05-15 16:10:27][org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl]HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO] [2017-05-15 16:10:30][org.hibernate.dialect.Dialect]HHH000400: Using dialect: org.hibernate.dialect.Oracle9iDialect
+[INFO] [2017-05-15 16:10:31][org.hibernate.engine.jdbc.internal.LobCreatorBuilder]HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+[INFO] [2017-05-15 16:10:32][org.hibernate.engine.transaction.internal.TransactionFactoryInitiator]HHH000399: Using default transaction strategy (direct JDBC transactions)
+[INFO] [2017-05-15 16:10:32][org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory]HHH000397: Using ASTQueryTranslatorFactory
