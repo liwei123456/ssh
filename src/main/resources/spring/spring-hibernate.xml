@@ -47,7 +47,11 @@
 				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
 				<prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
 				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
-			</props>
+                <prop key="hibernate.connection.url">jdbc:oracle:thin:@//localhost:1521/orcl</prop>
+                <prop key="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</prop>
+                <prop key="hibernate.connection.username">ssmdemo</prop>
+                <prop key="hibernate.connection.password">123456</prop>
+            </props>
 		</property>
 		<!-- 扫描hibernate注解配置的entity -->
 		<property name="packagesToScan" value="com.ssh.demo.model" />

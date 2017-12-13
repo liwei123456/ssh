@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2333572607">
+    <data-source source="LOCAL" name="Oracle - orcl@localhost" uuid="cc3de976-5c0f-4ae3-8d2f-3a623160d4ff">
+      <driver-ref>oracle</driver-ref>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@//localhost:1521/orcl</jdbc-url>
+      <user-name>ssmdemo</user-name>
+      <user-password>df9bdf98df99df9edf9fdf9c</user-password>
+      <schema-pattern>*.SSMDEMO</schema-pattern>
+      <default-schemas>*.SSMDEMO</default-schemas>
+      <libraries>
+        <library>
+          <url>file://$MAVEN_REPOSITORY$/com/oracle/ojdbc14/10.2.0.4.0/ojdbc14-10.2.0.4.0.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>
+
