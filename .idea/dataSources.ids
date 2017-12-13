@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Oracle - orcl@localhost" uuid="cc3de976-5c0f-4ae3-8d2f-3a623160d4ff">
+    <database-info product="Oracle" version="Oracle Database 11g Release 11.1.0.0.0 - Production" jdbc-version="10.2" driver-name="Oracle JDBC driver" driver-version="10.2.0.1.0">
+      <extra-name-characters>$#</extra-name-characters>
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <schema name="SSMDEMO" catalog=""/>
+    <table name="CASE" schema="SSMDEMO" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="SYS_CASE_TYPE" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="SYS_CASE_ACTION" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="SYS_USER" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="CASE_SOURCE" sqlType="NUMBER" precision="1" scale="0" nullable="true" jdbcType="3"/>
+      <column name="FILING_DATE" sqlType="DATE" precision="7" scale="0" nullable="true" jdbcType="91"/>
+      <column name="PLAINTIFF" sqlType="VARCHAR2" precision="2000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PLAINTIFF_AGENT" sqlType="VARCHAR2" precision="2000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DEFENDANT" sqlType="VARCHAR2" precision="2000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DEFENDANT_AGENT" sqlType="VARCHAR2" precision="2000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PLAINTIFF_APPEAL" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PROCEDURE" sqlType="NUMBER" precision="1" scale="0" nullable="true" jdbcType="3"/>
+      <column name="DEFENDANT_RELAY" sqlType="VARCHAR2" precision="4000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PROSECUTE_MATERIAL" sqlType="VARCHAR2" precision="2000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="EVIDENCE_REGISTRATION" sqlType="VARCHAR2" precision="2000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="CASE_COST" sqlType="VARCHAR2" precision="1000" scale="0" nullable="true" jdbcType="12"/>
+      <column name="FILING_STATUS" sqlType="NUMBER" precision="22" scale="0" nullable="true" jdbcType="3"/>
+      <column name="CASE_PROGRESS" sqlType="NUMBER" precision="22" scale="0" nullable="true" jdbcType="3"/>
+      <column name="CREATE_DATE" sqlType="DATE" precision="7" scale="0" nullable="true" jdbcType="91"/>
+      <column name="IS_VALID" sqlType="NUMBER" precision="1" scale="0" nullable="true" jdbcType="3"/>
+      <column name="INVALID_DATE" sqlType="DATE" precision="7" scale="0" nullable="true" jdbcType="91"/>
+      <primary-key name="PK_CASE" columns="ID"/>
+      <index name="CASE_ACTION_FK" unique="true" columns="SYS_CASE_ACTION"/>
+      <index name="CASE_CREATE_USER_FK" unique="true" columns="SYS_USER"/>
+      <index name="CASE_TYPE_FK" unique="true" columns="SYS_CASE_TYPE"/>
+    </table>
+    <table name="CASE_AGENT" schema="SSMDEMO" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="CASE" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="TYPE" sqlType="NUMBER" precision="1" scale="0" nullable="true" jdbcType="3"/>
+      <column name="PROXY_TYPE" sqlType="NUMBER" precision="1" scale="0" nullable="true" jdbcType="3"/>
+      <column name="AGENT_NAME" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="AGENT_TYPE" sqlType="NUMBER" precision="1" scale="0" nullable="true" jdbcType="3"/>
+      <column name="RELATIONSHIP" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="AGENCY_AUTHRORITY" sqlType="NUMBER" precision="1" scale="0" nullable="true" jdbcType="3"/>
+      <column name="UNIT_ADDRESS" sqlType="VARCHAR2" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PHONE" sqlType="VARCHAR2" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="EMAIL" sqlType="VARCHAR2" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PK_CASE_AGENT" columns="ID"/>
+      <index name="CASE_AGENT_CASE_FK" unique="true" columns="CASE"/>
+    </table>
+    <table name="CASE_COST" schema="SSMDEMO" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="CASE" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="COST_NAME" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="SYS_USER" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="PAY_TYPE" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="MONEY" sqlType="NUMBER" precision="24" scale="8" nullable="true" jdbcType="3"/>
+      <column name="PAYER" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="STATUS" sqlType="NUMBER" precision="1" scale="0" nullable="true" jdbcType="3"/>
+      <column name="PAY_DATE" sqlType="DATE" precision="7" scale="0" nullable="true" jdbcType="91"/>
+      <primary-key name="PK_CASE_COST" columns="ID"/>
+      <index name="CASE_COST_CASE_FK" unique="true" columns="CASE"/>
+      <index name="CASE_COST_NAME_FK" unique="true" columns="COST_NAME"/>
+      <index name="CASE_COST_PAY_TYPE_FK" unique="true" columns="PAY_TYPE"/>
+      <index name="CASE_COST_USER_FK" unique="true" columns="SYS_USER"/>
+    </table>
+    <table name="CASE_EVIDENCE_REGISTRATION" schema="SSMDEMO" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="CASE" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="SYS_USER" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="EVIDENCE_TYPE" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="EVIDENCE_NAME" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="EVIDENCE_SOURCE" sqlType="NUMBER" precision="1" scale="0" nullable="true" jdbcType="3"/>
+      <column name="CREATE_DATE" sqlType="DATE" precision="7" scale="0" nullable="true" jdbcType="91"/>
+      <column name="FILE_NAME" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="FILE_PATH" sqlType="VARCHAR2" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PK_CASE_EVIDENCE_REGISTRATION" columns="ID"/>
+      <index name="CASE_EVIDENCE_REG_CASE_FK" unique="true" columns="CASE"/>
+      <index name="CASE_EVIDENCE_R_USER_FK" unique="true" columns="SYS_USER"/>
+      <index name="CASE_EVIDENCE_TYPE_FK" unique="true" columns="EVIDENCE_TYPE"/>
+    </table>
+    <table name="CASE_PLAINTIFF_DEFENDANT" schema="SSMDEMO" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="CASE" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="NATION" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="NATIONALITY" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="PROVINCE" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="CITY" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="COUNTY_TOWN" sqlType="NUMBER" precision="22" scale="0" nullable="true" jdbcType="3"/>
+      <column name="EDUCATION_DEGREE" sqlType="NUMBER" precision="22" scale="0" nullable="true" jdbcType="3"/>
+      <column name="TYPE" sqlType="NUMBER" precision="1" scale="0" nullable="true" jdbcType="3"/>
+      <column name="FULL_NAME" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ALSO_CALL_NAME" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="SEX" sqlType="NUMBER" precision="1" scale="0" nullable="true" jdbcType="3"/>
+      <column name="ID_NUMBER" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="BIRTHDAY" sqlType="DATE" precision="7" scale="0" nullable="true" jdbcType="91"/>
+      <column name="ADDRESS" sqlType="VARCHAR2" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <column name="POSECODE" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="WORK_UNIT" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="PROFESSION" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="IS_SOLDIER" sqlType="NUMBER" precision="1" scale="0" nullable="true" jdbcType="3"/>
+      <column name="PHONE" sqlType="VARCHAR2" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="EMAIL" sqlType="VARCHAR2" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PK_CASE_PLAINTIFF_DEFENDANT" columns="ID"/>
+      <index name="CASE_PLAINTIFF_D_CASE_FK" unique="true" columns="CASE"/>
+      <index name="CITY_FK" unique="true" columns="CITY"/>
+      <index name="COUNTY_TOWN_FK" unique="true" columns="COUNTY_TOWN"/>
+      <index name="EDUCATION_DEGREE_FK" unique="true" columns="EDUCATION_DEGREE"/>
+      <index name="NATIONALITY_FK" unique="true" columns="NATIONALITY"/>
+      <index name="NATION_FK" unique="true" columns="NATION"/>
+      <index name="PROVINCE_FK" unique="true" columns="PROVINCE"/>
+    </table>
+    <table name="CASE_PROSECUTE_MATERIAL" schema="SSMDEMO" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="CASE" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="MATERIAL_NAME" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="MATERIAL_TYPE" sqlType="NUMBER" precision="1" scale="0" nullable="true" jdbcType="3"/>
+      <column name="MATERIAL_NUMBER" sqlType="NUMBER" precision="22" scale="0" nullable="true" jdbcType="3"/>
+      <column name="CREATE_DATE" sqlType="DATE" precision="7" scale="0" nullable="true" jdbcType="91"/>
+      <column name="FILE_NAME" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="FILE_PATH" sqlType="VARCHAR2" precision="200" scale="0" nullable="true" jdbcType="12"/>
+      <column name="STATUS" sqlType="NUMBER" precision="1" scale="0" nullable="true" jdbcType="3"/>
+      <primary-key name="PK_CASE_PROSECUTE_MATERIAL" columns="ID"/>
+      <index name="CASE_PROSECUTE_MA_CASE_FK" unique="true" columns="CASE"/>
+      <index name="CASE_PROSECUTE_MA_NAME_FK" unique="true" columns="MATERIAL_NAME"/>
+    </table>
+    <table name="ROLE_SEQUENCE" schema="SSMDEMO" catalog="" type="SEQUENCE"/>
+    <table name="SIJS_SEQ" schema="SSMDEMO" catalog="" type="SEQUENCE"/>
+    <table name="SYS_CASE_ACTION" schema="SSMDEMO" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="SYS_CASE_TYPE" sqlType="NUMBER" precision="22" scale="0" nullable="true" jdbcType="3"/>
+      <column name="SYS_CASE_ACTION" sqlType="NUMBER" precision="22" scale="0" nullable="true" jdbcType="3"/>
+      <column name="CASE_ACTION_CODE" sqlType="VARCHAR2" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="CASE_ACTION_NAME" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ORDERBY" sqlType="NUMBER" precision="22" scale="0" nullable="true" jdbcType="3"/>
+      <column name="CREATE_DATE" sqlType="DATE" precision="7" scale="0" nullable="true" jdbcType="91"/>
+      <column name="IS_VALID" sqlType="NUMBER" precision="1" scale="0" nullable="true" jdbcType="3"/>
+      <column name="INVALID_DATE" sqlType="DATE" precision="7" scale="0" nullable="true" jdbcType="91"/>
+      <primary-key name="PK_SYS_CASE_ACTION" columns="ID"/>
+      <index name="CASE_ACTION_CASE_TYPE_FK" unique="true" columns="SYS_CASE_TYPE"/>
+      <index name="PARENT_CASE_ACTION_FK" unique="true" columns="SYS_CASE_ACTION"/>
+    </table>
+    <table name="SYS_CASE_TYPE" schema="SSMDEMO" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="SYS_CASE_TYPE" sqlType="NUMBER" precision="22" scale="0" nullable="true" jdbcType="3"/>
+      <column name="CASE_TYPE_CODE" sqlType="VARCHAR2" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="CASE_TYPE_NAME" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="CASE_TYPE_WORD" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ORDERBY" sqlType="NUMBER" precision="22" scale="0" nullable="true" jdbcType="3"/>
+      <column name="CREATE_DATE" sqlType="DATE" precision="7" scale="0" nullable="true" jdbcType="91"/>
+      <column name="IS_VALID" sqlType="NUMBER" precision="1" scale="0" nullable="true" jdbcType="3"/>
+      <column name="INVALID_DATE" sqlType="DATE" precision="7" scale="0" nullable="true" jdbcType="91"/>
+      <primary-key name="PK_SYS_CASE_TYPE" columns="ID"/>
+      <index name="PARENT_CASE_TYPE_FK" unique="true" columns="SYS_CASE_TYPE"/>
+    </table>
+    <table name="SYS_CODE" schema="SSMDEMO" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="SYS_CODE_TYPE" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="SYS_CODE" sqlType="NUMBER" precision="22" scale="0" nullable="true" jdbcType="3"/>
+      <column name="CODE_CODE" sqlType="VARCHAR2" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="CODE_NAME" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ORDERBY" sqlType="NUMBER" precision="22" scale="0" nullable="true" jdbcType="3"/>
+      <column name="CREATE_DATE" sqlType="DATE" precision="7" scale="0" nullable="true" jdbcType="91"/>
+      <column name="IS_VALID" sqlType="NUMBER" precision="1" scale="0" nullable="true" jdbcType="3"/>
+      <column name="INVALID_DATE" sqlType="DATE" precision="7" scale="0" nullable="true" jdbcType="91"/>
+      <primary-key name="PK_SYS_CODE" columns="ID"/>
+      <index name="PARENT_CODE_FK" unique="true" columns="SYS_CODE"/>
+      <index name="SYS_CODE_CODE_TYPE_FK" unique="true" columns="SYS_CODE_TYPE"/>
+    </table>
+    <table name="SYS_CODE_TYPE" schema="SSMDEMO" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="CODE_TYPE_CODE" sqlType="VARCHAR2" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="CODE_TYPE_NAME" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ORDERBY" sqlType="NUMBER" precision="22" scale="0" nullable="true" jdbcType="3"/>
+      <column name="CREATE_DATE" sqlType="DATE" precision="7" scale="0" nullable="true" jdbcType="91"/>
+      <column name="IS_VALID" sqlType="NUMBER" precision="1" scale="0" nullable="true" jdbcType="3"/>
+      <column name="INVALID_DATE" sqlType="DATE" precision="7" scale="0" nullable="true" jdbcType="91"/>
+      <primary-key name="PK_SYS_CODE_TYPE" columns="ID"/>
+    </table>
+    <table name="SYS_DEPARTMENT" schema="SSMDEMO" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="SYS_DEPARTMENT" sqlType="NUMBER" precision="22" scale="0" nullable="true" jdbcType="3"/>
+      <column name="DEPARTMENT_CODE" sqlType="VARCHAR2" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="DEPARTMENT_NAME" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ORDERBY" sqlType="NUMBER" precision="22" scale="0" nullable="true" jdbcType="3"/>
+      <column name="CREATE_DATE" sqlType="DATE" precision="7" scale="0" nullable="true" jdbcType="91"/>
+      <column name="IS_VALID" sqlType="NUMBER" precision="1" scale="0" nullable="true" jdbcType="3"/>
+      <column name="INVALID_DATE" sqlType="DATE" precision="7" scale="0" nullable="true" jdbcType="91"/>
+      <primary-key name="PK_SYS_DEPARTMENT" columns="ID"/>
+      <index name="PARENT_DEP_FK" unique="true" columns="SYS_DEPARTMENT"/>
+    </table>
+    <table name="SYS_RESOURCE" schema="SSMDEMO" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="22" scale="0" nullable="false" jdbcType="3"/>
+      <column name="SYS_RESOURCE" sqlType="NUMBER" precision="22" scale="0" nullable="true" jdbcType="3"/>
+      <column name="RESOURCE_CODE" sqlType="VARCHAR2" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="RESOURCE_NAME" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="RESOURCE_TYPE" sqlType="NUMBER" precision="1" scale="0" nullable="true" jdbcType="3"/>
+      <column name="RESOURCE_URL" sqlType="VARCHAR2" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="ORDERBY" sqlType="NUMBER" precision="22" scale="0" nullable="true" jdbcType="3"/>
+      <column name="RESOURCE_ICON" sqlType="VARCHAR2" precision="50" scale="0" nullable="true" jdbcType="12"/>
+      <column name="CREATE_DATE" sqlType="DATE" precision="7" scale="0" nullable="true" jdbcType="91"/>
+      <column name="IS_VALID" sqlType="NUMBER" precision="1" scale="0" nullable="true" jdbcType="3"/>
+      <column name="INVALID_DATE" sqlType="DATE" precision="7" scale="0" nullable="true" jdbcType="91"/>
+      <primary-key name="PK_SYS_RESOURCE" columns="ID"/>
+      <index name="PARENT_RESOURCE_FK" unique="true" columns="SYS_RESOURCE"/>
+    </table>
+    <table name="SYS_ROLE" schema="SSMDEMO" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="11" scale="0" nullable="false" jdbcType="3" version="true"/>
+      <column name="ROLE_NAME" sqlType="VARCHAR2" precision="40" scale="0" nullable="false" jdbcType="12"/>
+      <column name="IS_VALID" sqlType="NUMBER" precision="1" scale="0" nullable="false" jdbcType="3"/>
+      <primary-key name="SYS_ROLE" columns="ID"/>
+      <exported-key name="FK_ROLE_ID" table="SYS_USER_ROLE" schema="SSMDEMO" catalog="" columns="SYS_ROLE"/>
+    </table>
+    <table name="SYS_USER" schema="SSMDEMO" catalog="" type="TABLE">
+      <column name="ID" sqlType="NUMBER" precision="11" scale="0" nullable="false" jdbcType="3" version="true"/>
+      <column name="USER_NAME" sqlType="VARCHAR2" precision="40" scale="0" nullable="false" jdbcType="12"/>
+      <column name="PASSWORD" sqlType="VARCHAR2" precision="255" scale="0" nullable="false" jdbcType="12"/>
+      <column name="AGE" sqlType="NUMBER" precision="4" scale="0" nullable="false" jdbcType="3"/>
+      <primary-key name="PK_USER" columns="ID"/>
+      <exported-key name="FK_USER_ID" table="SYS_USER_ROLE" schema="SSMDEMO" catalog="" columns="SYS_USER"/>
+    </table>
+    <table name="SYS_USER_ROLE" schema="SSMDEMO" catalog="" type="TABLE">
+      <column name="SYS_USER" sqlType="NUMBER" precision="11" scale="0" nullable="false" jdbcType="3"/>
+      <column name="SYS_ROLE" sqlType="NUMBER" precision="11" scale="0" nullable="false" jdbcType="3"/>
+      <primary-key name="PK_ROLE_USER" columns="SYS_USER,SYS_ROLE"/>
+      <foreign-key name="FK_ROLE_ID" columns="SYS_ROLE" ref-table="SYS_ROLE" ref-schema="SSMDEMO" ref-catalog="" ref-columns="ID" update-rule="0" delete-rule="1" deferrability="2"/>
+      <foreign-key name="FK_USER_ID" columns="SYS_USER" ref-table="SYS_USER" ref-schema="SSMDEMO" ref-catalog="" ref-columns="ID" update-rule="0" delete-rule="1" deferrability="2"/>
+    </table>
+    <table name="USER_SEQUENCE" schema="SSMDEMO" catalog="" type="SEQUENCE"/>
+  </data-source>
+</component>
