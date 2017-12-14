@@ -1,5 +1,7 @@
 package com.ssh.demo.service.impl;
 
-public class SysUserServerImpl {
+import com.ssh.demo.service.SysUserService;
+
+public class SysUserServerImpl implements SysUserService {
 
 }

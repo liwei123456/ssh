@@ -15,7 +15,7 @@ public class HibernateUtils {
 	static {
 		try {
 			//采用默认的hibernate.cfg.xml来启动一个Configuration的实例 
-			Configuration cfg = new Configuration().configure();
+			Configuration cfg = new Configuration().configure("hibernate/hibernate.cfg.xml");
 			// 以Configuration实例来创建SessionFactory实例  
             ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(cfg.getProperties()).build();
 			// 建立SessionFactory

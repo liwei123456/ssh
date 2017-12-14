@@ -38,6 +38,7 @@
 	<!-- 配置hibernate的SessionFactory -->
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="configLocation" value="classpath:hibernate/hibernate.cfg.xml"></property>
 		<!-- 注入数据源 相关信息看源码 -->
 		<property name="dataSource" ref="dataSource" />
 		<!-- hibernate配置信息 -->
