@@ -41,7 +41,7 @@
 		<!-- 注入数据源 相关信息看源码 -->
 		<property name="dataSource" ref="dataSource" />
 		<!-- hibernate配置信息 -->
-        <property name="hibernateProperties" value="hibernate.dialect=org.hibernate.dialect.MySQLDialect"></property>
+        <property name="hibernateProperties" value="hibernate.dialect=org.hibernate.dialect.Oracle10gDialect"></property>
 		<!-- 扫描hibernate注解配置的entity -->
 		<property name="packagesToScan" value="com.ssh.demo.model" />
 	</bean>
