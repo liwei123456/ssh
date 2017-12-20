@@ -21,8 +21,8 @@
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="location" value="classpath:jdbc.properties" />
 	</bean> -->
-	<!-- 扫描service自动注入为bean -->
-	<context:component-scan base-package="com.ssh.demo.controller,com.ssh.demo.service.impl,com.ssh.demo.dao.impl" />
+	<!-- 把普通pojo实例化到spring容器中 -->
+	<context:component-scan base-package="com.ssh.demo.controller,com.ssh.demo.service.impl,com.ssh.demo.dao" />
 	<!-- 用注解方式注入bean -->
 	<context:annotation-config />
 
