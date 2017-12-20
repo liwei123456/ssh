@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2333572607">
+  <component name="DataSourceManagerImpl" format="xml" hash="2824025263">
     <data-source source="LOCAL" name="Oracle - orcl@localhost" uuid="cc3de976-5c0f-4ae3-8d2f-3a623160d4ff">
       <driver-ref>oracle</driver-ref>
       <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
@@ -12,6 +12,29 @@
       <libraries>
         <library>
           <url>file://$MAVEN_REPOSITORY$/com/oracle/ojdbc14/10.2.0.4.0/ojdbc14-10.2.0.4.0.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="hibernate:hibernate.cfg.xml" uuid="cf01fd89-cfba-46c5-a1c4-c6595fc4330f">
+      <driver-ref>oracle</driver-ref>
+      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@localhost:1521:orcl</jdbc-url>
+      <user-name>ssmdemo</user-name>
+      <user-password>df9bdf98df99df9edf9fdf9c</user-password>
+      <libraries>
+        <library>
+          <url>file://F:\java\m2\repository\com\oracle\ojdbc14\10.2.0.4.0\ojdbc14-10.2.0.4.0.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="myJPA" uuid="d66bc74c-def5-4bfb-8e9c-84fdd121ae2d">
+      <jdbc-driver>oracle.jdbc.driver.OracleDriver</jdbc-driver>
+      <jdbc-url>jdbc:oracle:thin:@localhost:1521:orcl</jdbc-url>
+      <user-name>ssmdemo</user-name>
+      <user-password>df9bdf9bdf9bdf9bdf9bdf9b</user-password>
+      <libraries>
+        <library>
+          <url>file://F:\java\m2\repository\com\oracle\ojdbc14\10.2.0.4.0\ojdbc14-10.2.0.4.0.jar</url>
         </library>
       </libraries>
     </data-source>
